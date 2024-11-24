@@ -1,0 +1,172 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(to bottom, #f8a1d1, #fad0c4, #a6c1ee);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    color: #333;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #f09eb6;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Header */
+header h1 {
+    font-size: 3rem;
+    color: #e6399b;
+    animation: slideDown 2s ease-in-out;
+}
+
+header .subheading {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #444;
+}
+
+/* Letter Section */
+.letter-section {
+    margin: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.letter-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Slideshow Section */
+.slideshow {
+    position: relative;
+    margin: 20px 0;
+}
+
+.slides {
+    display: none;
+}
+
+.slides img {
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 2s ease-in-out;
+}
+
+/* Dots for Navigation */
+.dots {
+    text-align: center;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 5px 3px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #e6399b;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    color: #e6399b;
+    font-size: 1.2rem;
+}
+
+/* Heart Animations */
+.heart {
+    width: 20px;
+    height: 20px;
+    background: #ff6186;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 0; /* Start from the bottom of the screen */
+    animation: float 10s infinite;
+    transform: rotate(45deg);
+}
+
+.heart:before, .heart:after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background: #ff6186;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -10px;
+}
+
+.heart:after {
+    left: 10px;
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-250vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
